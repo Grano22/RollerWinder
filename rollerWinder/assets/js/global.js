@@ -1,0 +1,1 @@
+export const pageURL = location.protocol+"//"+(location.hostname || location.host)+"/";

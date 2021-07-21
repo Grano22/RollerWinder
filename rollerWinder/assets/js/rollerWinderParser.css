@@ -1,0 +1,51 @@
+/* Parser Presentation Elements */
+div.presentationSlide {
+    width: 100%;
+    height: 550px;
+    min-width: 240px; /* 240px, 640px */
+    min-height: 135px; /* 135px, 480px */
+    position: relative;
+}
+
+div.parentPresentationSlideLayout {
+    width: 100%;
+    height: 100%;
+    background-color: #e6e6e6;
+    position: absolute;
+    left: 0; top: 0;
+}
+
+div.presentationElement {
+    position: absolute;
+}
+
+div.presentationElement.maxSize {
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+}
+
+output {
+
+}
+
+div.presentationSlide h1, div.presentationSlide h2 {
+    padding: 10px 0;
+}
+
+/* Editable */
+div.presentationSlide h1.editable, div.presentationSlide h2.editable {
+    border: 2px dashed #000;
+}
+
+div.presentationSlide textarea {
+    border: 2px dashed #000;
+}
+
+div.presentationSlide img {
+
+}
+
+div.presentationSlide img.editable {
+    
+}

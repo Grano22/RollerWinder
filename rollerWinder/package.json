@@ -1,0 +1,31 @@
+{
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-syntax-jsx": "^7.10.4",
+        "@babel/preset-react": "^7.10.4",
+        "@fortawesome/fontawesome-free": "^5.14.0",
+        "@symfony/webpack-encore": "^0.30.0",
+        "axios": "^0.19.2",
+        "core-js": "^3.0.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "regenerator-runtime": "^0.13.2",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/plugin-transform-runtime": "^7.11.0",
+        "create-react-class": "^15.6.3",
+        "react-router-dom": "^5.2.0"
+    }
+}

@@ -1,0 +1,319 @@
+#presentationCreator {
+    height: calc(100vh - 85px);
+}
+
+#presentationViewer {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 260px);
+    background-color: #bed1d1;
+    height: 100%;
+}
+
+.editableContainer {
+    /*box-shadow: 0 0 2px 0.5px #000;*/
+    border: 2px dashed #000;
+    padding: 5px;
+    position: absolute;
+}
+
+.editableContainer > * {
+    margin: 0;
+}
+
+.editableContainer.valueEditable {
+    border-style: dotted;
+}
+
+.editableContainer.moveable {
+    cursor: move;
+}
+
+.editableContainer.moveable:before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f0b2';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    left: -8px; bottom: -8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.editableContainer.moveable:after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f0b2';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    right: -8px; top: -8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.editableContainer.rotateable {
+    /*cursor: resize;*/
+}
+
+.editableContainer.rotateable:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    left: -8px; top: -8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.editableContainer.rotateable:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    right: -8px; bottom: -8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.editableContainer.resizeable {
+
+}
+
+.editableContainer.resizeable .cornerLeftyTop {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    left: -8px; top: -8px;
+    background: #fff;
+
+    cursor: nw-resize;
+}
+
+.editableContainer.resizeable .cornerLeftyBottom {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    left: -8px; bottom: -8px;
+    background: #fff;
+
+    cursor: nesw-resize;
+}
+
+.editableContainer.resizeable .cornerRightyTop {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    right: -8px; top: -8px;
+    background: #fff;
+
+    cursor: nesw-resize;
+}
+
+.editableContainer.resizeable .cornerRightyBottom {
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000;
+    right: -8px; bottom: -8px;
+    background: #fff;
+
+    cursor: nw-resize;
+}
+
+.editableContainer img {
+    pointer-events: none;
+    -webkit-pointer-events: none;
+    -moz-pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+#presentationViewer .presentationSlide {
+    margin: 10px;
+    box-shadow: 0 0 2px 0.5px #000;
+}
+
+.menucontent {
+
+}
+
+.menucontent h3 { text-align: center; }
+
+#presentationCreator-toolbox {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+    background: #92b3b3;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#presentationCreator-toolbox input {
+    padding: 7px 11px;
+    background: #a8a8a8;
+    border: 2px solid #787878;
+    border-radius: 7px;
+}
+
+.linearmenu {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+.linearmenu span {
+    background: #5f7373;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.linearmenu span:hover {
+    background: #738c8c;
+    cursor: pointer;
+}
+
+.linearmenu span.selected {
+    background: #92b3b3;
+}
+
+.linearmenu span.selected:hover {
+    background: #7a8787; /*#a3b8b8;*/
+}
+
+.linearmenu span i, .linearmenu span img { -webkit-pointer-events: none; -moz-pointer-events: none; pointer-events: none;  }
+
+#toolboxElementsNamespaceList {
+    overflow-y: auto;
+}
+
+#toolboxElementsNamespaceList li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background: #8e9e9e;
+}
+
+#toolboxElementsNamespaceList li:hover {
+    background: #788787;
+    cursor: pointer;
+}
+
+#toolboxElementsNamespaceList li i {
+    font-weight: bolder;
+    font-size: 24px;
+} 
+
+/* Slides List */
+#toolboxSlidesList li {
+    background: #6f8285;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+#toolboxSlidesList li .deleteSlideOperation {
+    float: right;
+    transition: 0.2s ease-out;
+}
+
+#toolboxSlidesList li .deleteSlideOperation:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+#toolboxSlidesList li .deleteSlideOperation.selected {
+    background: #859b9e;
+}
+
+#toolboxSlidesList li:hover {
+    cursor: pointer;
+    background: #7a8f91;
+}
+
+#toolboxSlidesList li.selected {
+    background: #505b61;
+}
+
+/* Toolbox */
+.toolBox {
+    margin: auto 10px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    width: 90%;
+    background: #546666;
+    box-sizing: border-box;
+}
+
+.toolBox span:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/* Tree */
+.toolbarTreeView {
+    list-style: none;
+}
+
+#myUL {
+    margin: 0;
+    padding: 0;
+}
+  
+.caret {
+    cursor: pointer;
+    user-select: none;
+}
+  
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+  
+.caret-down::before {
+    transform: rotate(90deg);
+}
+  
+.nested {
+    display: none;
+    list-style: none;
+}
+  
+.active {
+    display: block;
+}
+
+.toolbarTreeView ul.optionsList {
+    
+}
+
+.toolbarTreeView ul.optionsList li {
+    background: #737980;
+    box-sizing: border-box;
+    padding: 6px;
+    font-weight: bold;
+}
+
+
+.toolbarTreeView ul.optionsList li:hover {
+    cursor: pointer;
+    background: #53575c;
+}
